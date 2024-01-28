@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "./App.jsx";
-import Home from "./components/pages/Home.jsx";
-import Error404Page from "./components/pages/Error404Page.jsx";
-import GetHelp from "./components/pages/Gethelp.jsx";
+import App from "./App";
+import Home from "./pages/Home";
+import GetHelp from "./pages/GetHelp";
+import Error404Page from "./pages/Error404Page";
 
 
 const router = createBrowserRouter([
