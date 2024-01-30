@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+
 import { useForm } from "react-hook-form";
-import axios from "axios";
 
 const AgreeDisagreeBox = () => {
-  const navigate = useNavigate();
-  const [error, setError] = useState("");
   const { register, handleSubmit } = useForm();
-  const [registerEmail, setRegisterEmail] = useState("");
-  const [loading, setLoading] = useState(false);
-
+  const [canNotSubmit, setCanNotSubmit] = useState(true);
   const questionFormResponseData = async (data) => {
     console.log(data);
   };
@@ -117,67 +112,21 @@ const AgreeDisagreeBox = () => {
     },
   ];
   const [data, setData] = useState([...qes]);
-  // console.log(data, "jghgkhj");
-  // useEffect(() => {
-  //   setData(data);
-  // }, [data]);
-  const [rendata, setRenData] = useState({});
-  useEffect(() => {
-    setData(data);
-  }, [setData]);
 
   const radioClickedHandler = (index) => {
-    // console.log(data[index], "qwerty");
-    // console.log(data[0], "1");
-    alert("radioclicked");
-    console.log(data);
+    const newData = [...data];
     if (index === 0) {
-      // setData((data[index].disabled = false));
-      console.log(data[index + 1].disabled);
-
-      data[index + 1].disabled = !data[index + 1].disabled;
-      // data[index + 2].disabled = !data[index + 2].disabled;
-      setData(data);
-
-      // console.log(data);
+      newData[index + 1].disabled = false;
+    } else if (0 < index && index < data.length - 1) {
+      newData[index + 1].disabled = false;
+    } else {
+      setCanNotSubmit(false);
     }
-    // else if (0 < index < 20) {
-    //   setData((data[index - 1].disabled = true));
-    //   setData((data[index].disabled = false));
-    //   setData((data[index + 1].disabled = false));
-    // } else {
-    //   setData((data[index - 1].disabled = true));
-    //   setData((data[index].disabled = false));
-    // }
-
-    // console.log(data, "2");
-
-    setData(data);
+    setData(newData);
   };
 
   return (
     <div>
-      {/* <div class="w-full p-4 text-center border-gray-200 shadow sm:p-8">
-      <p class="mb-5 text-base ">1. I feel overwhelmed by my emotions.</p>
-      <div class="py-24 flex items-center justify-center bg-gray-400 space-x-8">
-        <div class="w-28 h-28 border-4 border-black rounded-full flex items-center justify-center ">
-          
-          <button class="w-16 h-16 border border-black bg-blue-600 rounded-full"></button>
-        </div>
-        <div class="w-24 h-24 border-4 border-black rounded-full  flex items-center justify-center">
-          <button class="w-14 h-14 bg-blue-600 rounded-full" onClick={((e)=>console.log(e))}></button>
-        </div>
-        <div class="w-20 h-20 border-4 border-black rounded-full  flex items-center justify-center ">
-          <button class="w-12 h-12 bg-blue-600 rounded-full"></button>
-        </div>
-        <div class="w-24 h-24 border-4 border-black rounded-full  flex items-center justify-center">
-          <button class="w-14 h-14 bg-blue-600 rounded-full"></button>
-        </div>
-        <div class="w-28 h-28 border-4 border-black rounded-full  flex items-center justify-center ">
-          <button class="w-16 h-16 bg-blue-600 rounded-full"></button>
-        </div>
-      </div>
-    </div> */}
       <form onSubmit={handleSubmit(questionFormResponseData)}>
         {data.map((q, index) => (
           <div key={q.name}>
@@ -190,14 +139,10 @@ const AgreeDisagreeBox = () => {
                   onClick={() => radioClickedHandler(index)}
                   type="radio"
                   value="1"
-                  // onClick={radioClickedHandler(index)}
                   className="w-28 h-28 cursor-pointer border-2 border-red-500"
                   {...register(`${q.name}`, {
                     required: true,
                   })}
-                  // onChange={(index) => {
-                  //   radioClickedHandler(index);
-                  // }}
                 />
               </div>
               <div>
@@ -253,7 +198,9 @@ const AgreeDisagreeBox = () => {
           </div>
         ))}
 
-        <button type="submit">Submit</button>
+        <button disabled={canNotSubmit} type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );
