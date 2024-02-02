@@ -3,7 +3,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import GetHelp from "./pages/GetHelp";
 import Error404Page from "./pages/Error404Page";
-
+import Test from "./pages/Test";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: "/get-help",
         element: <GetHelp />,
+      },
+      {
+        path: "/test",
+        element: <Test />,
       },
       {
         path: "*",
