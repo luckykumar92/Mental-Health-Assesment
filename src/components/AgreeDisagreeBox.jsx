@@ -189,7 +189,7 @@ const AgreeDisagreeBox = () => {
                 <h1 className="text-center">{q.question}</h1>
                 <div className="flex flex-col justify-center items-center py-4 max-[700px]:p-2 w-fit mx-auto">
                   <div className="flex flex-row space-x-4 max-[700px]:space-x-2 justify-center items-center">
-                    <div className="flex flex-col text-center">
+                    <div className="flex flex-col text-center mt-4">
                       <input
                         disabled={q.disabled}
                         onClick={() => radioClickedHandler(index)}
@@ -238,7 +238,7 @@ const AgreeDisagreeBox = () => {
                         })}
                       />
                     </div>
-                    <div className="flex flex-col text-center">
+                    <div className="flex flex-col text-center mt-4">
                       <input
                         disabled={q.disabled}
                         onClick={() => radioClickedHandler(index)}
