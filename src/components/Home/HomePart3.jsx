@@ -5,7 +5,7 @@ const HomePart3 = () => {
   return (
     <div>
       {/* <!--Blogs--> */}
-
+ 
       <h1 class="text-center text-7xl my-8 text-white">
         Learn more about mental health
       </h1>
