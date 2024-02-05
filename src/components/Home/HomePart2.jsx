@@ -3,55 +3,57 @@ import therapists from "./assets/therapists.webp";
 
 const HomePart2 = () => {
   return (
-    <div>
-      <div class="bg-[url('assets/bg2.jpg')] bg-fixed bg-no-repeat bg-cover">
+    <div className=" bg-white">
+      <div className="bg-[#1AC4A7] md:pl-10 pl-2 md:pr-5 pr-0 py-5 w-full mx-auto">
         {/* <!--Find therapist--> */}
-        <section class="py-16 text-center px-8 items-center bg-green-500   rounded-lg text-white flex">
-          <div class="px-8">
-            <h2 class="text-7xl">We are here to help!!!!</h2>
-            <h2 class="text-3xl pt-5 pb-5">Find a therapist</h2>
+        <section className="flex md:flex-row flex-col justify-between">
+          <div className="md:px-8 px-2 text-white md:mb-0 mb-5 ">
+            <h2 className="text-3xl md:text-3xl lg:text-5xl md:mb-10 mb-5">
+              We are here to help!!!!
+            </h2>
             <form>
-              <label
-                for="default-search"
-                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
+              <h2 className="text-3xl pt-5 mb-6">Find a therapist</h2>
+              <label className="mb-2 text-sm font-medium sr-only text-white">
                 Search
               </label>
-              <div class="relative">
-                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+              <div className="relative">
+                <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                   <svg
-                    class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                    className="w-4 h-4 text-black"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
-                    viewBox="0 0 20 20">
+                    viewBox="0 0 20 20"
+                  >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
                     />
                   </svg>
                 </div>
                 <input
                   type="search"
-                  id="default-search"
-                  class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="block w-full p-4 ps-10 text-sm rounded-lg placeholder:bg-white text-black"
                   placeholder="Search Therapists..."
                   required
                 />
                 <button
                   type="submit"
-                  class="text-white absolute end-2.5 bottom-2.5 bg-black hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  className="text-white absolute end-2.5 bottom-2.5 bg-[#1AC4A7]  font-medium rounded-lg text-sm px-4 py-2"
+                >
                   Search
                 </button>
               </div>
             </form>
           </div>
 
+          {/* ----------- Image ---------------- */}
           <div>
             <img
-              class="h-auto max-w-lg ms-auto rounded-full px-5"
+              className=" max-w-72 md:w-72 md:h-56 lg:w-96 lg:h-72  rounded-3xl mx-auto md:mx-0"
               src={therapists}
               alt="image description"
             />

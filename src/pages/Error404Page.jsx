@@ -12,7 +12,8 @@ const Error404Page = () => {
         <Link
           to="/"
           className="px-4 py-2 font-medium text-white bg-blue-700
-          rounded-md hover:bg-blue-600 transition-all duration-200 ease-in-out">
+          rounded-md hover:bg-blue-600 transition-all duration-200 ease-in-out"
+        >
           Go Home
         </Link>
       </div>

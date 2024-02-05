@@ -128,10 +128,10 @@ const AgreeDisagreeBox = () => {
   };
 
   return (
-    <div className="px-20 pt-20 max-[480px]:px-1 max-[480px]:pt-2 bg-gray-300 mx-auto">
+    <div className="px-20 pt-20 max-[650px]:px-1 max-[650px]:pt-2 bg-gray-300 mx-auto">
       <div className="mx-auto bg-white">
         <div style={{ position: "relative", width: "100%", height: "100%" }}>
-          <img src={homeImage} alt="" srcset="" className="w-full h-full" />
+          <img src={homeImage} alt="" srcSet="" className="w-full h-full" />
           <div
             style={{
               position: "absolute",
@@ -142,8 +142,9 @@ const AgreeDisagreeBox = () => {
               right: 0,
               margin: "auto",
               textAlign: "center",
-            }}>
-            <p className="text-8xl max-[700px]:text-2xl  text-white mx-auto mb-8">
+            }}
+          >
+            <p className="max-[639px]:text-2xl sm:text-4xl md:text-6xl lg:text-8xl text-white mx-auto mb-8">
               Your Mental Health Today Test
             </p>
             <span className="mx-auto mt-20">
@@ -195,7 +196,7 @@ const AgreeDisagreeBox = () => {
                         onClick={() => radioClickedHandler(index)}
                         type="radio"
                         value="1"
-                        className="!bg-green-500 !border-2 !border-red-700 w-28 h-28 max-[700px]:w-24 max-[700px]:h-24 max-[480px]:w-16 max-[480px]:h-16 cursor-pointer"
+                        className="w-28 h-28 max-[900px]:w-24 max-[900px]:h-24 max-[650px]:w-16 max-[650px]:h-16 cursor-pointer"
                         {...register(`${q.name}`, {
                           required: true,
                         })}
@@ -208,7 +209,7 @@ const AgreeDisagreeBox = () => {
                         onClick={() => radioClickedHandler(index)}
                         type="radio"
                         value="2"
-                        className="w-24 h-24 max-[700px]:w-20 max-[700px]:h-20 max-[480px]:w-14 max-[480px]:h-14 cursor-pointer"
+                        className="w-24 h-24 max-[900px]:w-20 max-[900px]:h-20 max-[650px]:w-14 max-[650px]:h-14 cursor-pointer"
                         {...register(`${q.name}`, {
                           required: true,
                         })}
@@ -220,7 +221,7 @@ const AgreeDisagreeBox = () => {
                         onClick={() => radioClickedHandler(index)}
                         type="radio"
                         value="3"
-                        className="w-20 h-20 max-[700px]:w-16 max-[700px]:h-16 max-[480px]:w-12 max-[480px]:h-12 cursor-pointer"
+                        className="w-20 h-20 max-[900px]:w-16 max-[900px]:h-16 max-[650px]:w-12 max-[650px]:h-12 cursor-pointer"
                         {...register(`${q.name}`, {
                           required: true,
                         })}
@@ -232,7 +233,7 @@ const AgreeDisagreeBox = () => {
                         onClick={() => radioClickedHandler(index)}
                         type="radio"
                         value="4"
-                        className="w-24 h-24 max-[700px]:w-20 max-[700px]:h-20 max-[480px]:w-14 max-[480px]:h-14 cursor-pointer"
+                        className="w-24 h-24 max-[900px]:w-20 max-[900px]:h-20 max-[650px]:w-14 max-[650px]:h-14 cursor-pointer"
                         {...register(`${q.name}`, {
                           required: true,
                         })}
@@ -244,7 +245,7 @@ const AgreeDisagreeBox = () => {
                         onClick={() => radioClickedHandler(index)}
                         type="radio"
                         value="5"
-                        className="w-28 h-28 max-[700px]:w-24 max-[700px]:h-24 max-[480px]:w-16 max-[480px]:h-16 cursor-pointer"
+                        className="w-28 h-28 max-[900px]:w-24 max-[900px]:h-24 max-[650px]:w-16 max-[650px]:h-16 cursor-pointer"
                         {...register(`${q.name}`, {
                           required: true,
                         })}
@@ -252,11 +253,11 @@ const AgreeDisagreeBox = () => {
                       <span className="">Disagree</span>
                     </div>
                   </div>
-                  <hr class="h-px my-8 border-0 bg-[#0b7361]  mx-auto w-[90%]" />
+                  <hr className="h-px my-8 border-0 bg-[#0b7361]  mx-auto w-[90%]" />
                 </div>
               </div>
             ))}
-            <div className="flex flex-col place-content-center justify-center items-center mb-4">
+            <div className="flex flex-col place-content-center justify-center items-center pb-4">
               <p className="mb-4">Enter your Email Address </p>
               <input
                 type="text"
@@ -267,7 +268,8 @@ const AgreeDisagreeBox = () => {
               <button
                 disabled={canNotSubmit}
                 type="submit"
-                class="text-white bg-[#0b7361] px-6 py-2 font-medium rounded-md">
+                className="text-white bg-[#0b7361] px-6 py-2 font-medium rounded-md"
+              >
                 Get Your Score
               </button>
             </div>

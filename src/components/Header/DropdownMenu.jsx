@@ -21,7 +21,7 @@ export default function DropdownMenu() {
   const navItems = [
     {
       name: "Find a Therapist",
-      slug: "/",
+      slug: "/find-therapist",
       active: true,
     },
     {
@@ -42,41 +42,29 @@ export default function DropdownMenu() {
   ];
   return (
     <div className="bg-[#009A80]">
-      <Dropdown className="bg-[#009A80]">
-        <MenuButton className="bg-[#009A80]">
-          <MenuIcon className=" bg-[#009A80]" />
+      <Dropdown>
+        <MenuButton>
+          <MenuIcon />
         </MenuButton>
         <Menu>
-          <ul class="font-medium flex flex-col p-4">
+          <ul className="font-medium flex flex-col p-4">
             {navItems.map((item) =>
               item.active ? (
-                <li key={item.name} className="text-white">
-                  <MenuItem>
-                    <NavLink
-                      to={item.slug}
-                      className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? " text-white " : ""
-                      }>
-                      {item.name}
-                    </NavLink>
-                    <br />
-                    <hr />
-                  </MenuItem>
-                </li>
+                <MenuItem key={item.name}>
+                  <NavLink
+                    to={item.slug}
+                    className={({ isActive, isPending }) =>
+                      isPending ? "pending" : isActive ? " text-white " : ""
+                    }
+                  >
+                    {item.name}
+                  </NavLink>
+                  <br />
+                  <hr />
+                </MenuItem>
               ) : null
             )}
-            {/* </MenuItem> */}
           </ul>
-          {/* </MenuItem> */}
-          {/* <MenuItem onClick={createHandleMenuClick("Profile")}>
-            Profile
-          </MenuItem>
-          <MenuItem onClick={createHandleMenuClick("Language settings")}>
-            Language settings
-          </MenuItem>
-          <MenuItem onClick={createHandleMenuClick("Log out")}>
-            Log out
-          </MenuItem> */}
         </Menu>
       </Dropdown>
     </div>
