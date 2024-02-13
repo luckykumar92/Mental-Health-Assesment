@@ -1,10 +1,10 @@
 import React from "react";
-import AgreeDisagreeBox from "../components/FindTherapist/AgreeDisagreeBox";
+import FindTherapist from "../components/FindTherapist/FindTherapist";
 
 const FindTherapistPage = () => {
   return (
     <>
-      <AgreeDisagreeBox />
+      <FindTherapist />
     </>
   );
 };

@@ -3,7 +3,7 @@ import therapists from "./assets/therapists.webp";
 
 const HomePart2 = () => {
   return (
-    <div className=" bg-white">
+    <div className=" bg-white dark:bg-black">
       <div className="bg-[#1AC4A7] md:pl-10 pl-2 md:pr-5 pr-0 py-5 w-full mx-auto">
         {/* <!--Find therapist--> */}
         <section className="flex md:flex-row flex-col justify-between">

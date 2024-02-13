@@ -5,7 +5,7 @@ import HomePart3 from "./HomePart3";
 
 const Home = () => {
   return (
-    <div className="flex flex-col px-20 pt-20 max-[480px]:px-1 max-[480px]:pt-2 mx-auto bg-gray-300">
+    <div className="flex flex-col px-20 pt-20 max-[480px]:px-1 max-[480px]:pt-2 mx-auto bg-gray-300 dark:bg-black">
       <HomePart1 />
       <HomePart2 />
       <HomePart3 />

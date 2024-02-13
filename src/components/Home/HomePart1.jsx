@@ -16,7 +16,7 @@ const imageArray = [
 
 const HomePart1 = () => {
   return (
-    <div className=" bg-white">
+    <div className=" bg-white dark:bg-black">
       <div className="bg-[#1AC4A7] px-2 sm:px-10 md:px-20 py-5 md:py-20 md:rounded-t-none md:rounded-3xl">
         <h5 className="mb-2 text-3xl md:text-4xl lg:text-5xl font-bold text-white">
           Take a free mental health test today
@@ -34,7 +34,7 @@ const HomePart1 = () => {
       {/* <!--Take a test--> */}
       <div className="mx-auto w-full my-10">
         <div className="overflow-x-auto flex flex-row gap-8">
-          {imageArray.map((i,index) => (
+          {imageArray.map((i, index) => (
             <img
               key={index}
               src={i.url}

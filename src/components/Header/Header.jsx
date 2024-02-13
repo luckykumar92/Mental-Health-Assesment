@@ -5,18 +5,18 @@ import DropdownMenu from "./DropdownMenu.jsx";
 
 const navItems = [
   {
-    name: "Find a Therapist",
-    slug: "/find-therapist",
+    name: "Depression Test",
+    slug: "/depression-test",
     active: true,
   },
   {
-    name: "Get Help",
-    slug: "/get-help",
+    name: "Mental Health Test",
+    slug: "/mental-health-test",
     active: true,
   },
   {
-    name: "Magazine",
-    slug: "#",
+    name: "Anger Management Test",
+    slug: "/anger-management-test",
     active: true,
   },
   {
