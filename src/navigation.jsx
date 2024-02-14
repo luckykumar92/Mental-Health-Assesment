@@ -1,13 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import GetHelp from "./pages/GetHelp";
 import Error404Page from "./pages/Error404Page";
-import Test from "./pages/Test";
 import HomePage from "./pages/HomePage";
-import FindTherapistPage from "./pages/FindTherapistPage";
 import DepressionTestPage from "./pages/DepressionTestPage";
 import MentalHealthTodayTestPage from "./pages/MentalHealthTodayTestPage";
 import AngerManagementTestPage from "./pages/AngerManagementTestPage";
+import SelfEsteemTestPage from "./pages/SelfEsteemTestPage";
+import AnxietyTestPage from "./pages/AnxietyTestPage";
 
 const router = createBrowserRouter([
   {
@@ -31,12 +30,12 @@ const router = createBrowserRouter([
         element: <AngerManagementTestPage />,
       },
       {
-        path: "get-help",
-        element: <GetHelp />,
+        path: "self-esteem-test",
+        element: <SelfEsteemTestPage />,
       },
       {
-        path: "test",
-        element: <Test />,
+        path: "anxiety-test",
+        element: <AnxietyTestPage />,
       },
       {
         path: "*",

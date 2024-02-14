@@ -35,8 +35,13 @@ export default function DropdownMenu() {
       active: true,
     },
     {
-      name: "Today",
-      slug: "#",
+      name: "Self Esteem Test",
+      slug: "/self-esteem-test",
+      active: true,
+    },
+    {
+      name: "Anxiety Test",
+      slug: "/anxiety-test",
       active: true,
     },
   ];
